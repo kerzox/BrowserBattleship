@@ -1,0 +1,69 @@
+.grid-board-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.grid-board {
+  border-collapse: collapse;
+}
+
+.grid-cell {
+  width: 50px;
+  height: 50px;
+  border: 1px dotted #565656;
+  cursor: pointer;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.grid-cell:hover {
+  border: 1px solid #565656;
+}
+
+.grid-cell-area-selected {
+  background-color: #acdfe5;
+}
+
+.grid-cell-area-selected-deny {
+  background-color: #e5acac !important;
+}
+
+.clicked {
+  background-color: #6dd2df;
+  color: #fff;
+}
+
+.tryhit {
+  background-color: #fad542;
+  color: #fff;
+}
+
+.hit {
+  background-color: #ff4848;
+  color: #fff;
+}
+
+.hit-on-you {
+  background-color: #36727a;
+  color: #fff;
+}
+
+.miss {
+  background-color: #3d3d3d;
+  color: #fff;
+}
+
+.footer-cell {
+  text-align: left;
+  padding-top: 25px;
+}
+
+.miss-on-you {
+  background-color: #cacaca;
+}
+
+.grid-cell.highlighted {
+  background-color: #838383;
+}

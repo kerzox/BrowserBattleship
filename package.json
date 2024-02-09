@@ -1,0 +1,50 @@
+{
+  "name": "battle",
+  "private": true,
+  "sideEffects": false,
+  "type": "module",
+  "scripts": {
+    "build": "remix build",
+    "dev": "remix dev -c \"node ./server/server.mjs \"",
+    "lint": "eslint --ignore-path .gitignore --cache --cache-location ./node_modules/.cache/eslint .",
+    "start": "remix-serve ./build/index.js",
+    "server": "node ./server/server.mjs",
+    "typecheck": "tsc",
+    "icons": "npx @svgr/cli --out-dir app/components/icons -- app/icons"
+  },
+  "dependencies": {
+    "@iconscout/react-unicons": "^2.0.2",
+    "@remix-run/css-bundle": "^2.5.1",
+    "@remix-run/express": "^2.5.1",
+    "@remix-run/node": "^2.5.1",
+    "@remix-run/react": "^2.5.1",
+    "dotenv": "^16.4.1",
+    "express": "^4.18.2",
+    "isbot": "^4.1.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "socket.io": "^4.7.4",
+    "socket.io-client": "^4.7.4"
+  },
+  "devDependencies": {
+    "@remix-run/dev": "^2.5.1",
+    "@svgr/cli": "^8.1.0",
+    "@svgr/plugin-jsx": "^8.1.0",
+    "@svgr/plugin-prettier": "^8.1.0",
+    "@svgr/plugin-svgo": "^8.1.0",
+    "@types/express": "^4.17.21",
+    "@types/react": "^18.2.20",
+    "@types/react-dom": "^18.2.7",
+    "@typescript-eslint/eslint-plugin": "^6.7.4",
+    "eslint": "^8.38.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-import-resolver-typescript": "^3.6.1",
+    "eslint-plugin-import": "^2.28.1",
+    "eslint-plugin-jsx-a11y": "^6.7.1",
+    "eslint-plugin-react": "^7.33.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "npm-run-all": "^4.1.5",
+    "npm-watch": "^0.11.0",
+    "typescript": "^5.1.6"
+  }
+}

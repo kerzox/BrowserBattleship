@@ -1,0 +1,156 @@
+.button-clean {
+  background-color: rgb(255, 255, 255);
+  padding: 12px;
+  font-family: "Source Code Pro";
+  border: 1px solid transparent;
+  border-bottom: 1px solid #565656;
+}
+
+.button-clean:hover {
+  border: 1px solid #565656;
+  transition: border 1s ease;
+}
+
+.button-clean:active {
+  background-color: #adadad;
+}
+
+.button-danger {
+  background-color: rgb(255, 255, 255);
+  padding: 12px;
+  font-family: "Source Code Pro";
+  border: 1px solid transparent;
+  border-bottom: 1px solid #565656;
+}
+
+.button-danger:hover {
+  border: 1px solid #ff5353;
+  transition: border 1s ease;
+}
+
+.button-danger:active {
+  background-color: #ff5353;
+}
+
+.disabled {
+  background-color: #cacaca;
+  opacity: 0.6;
+  transition: all 1s ease;
+}
+
+.disabled:hover {
+  border: 1px solid #565656;
+  transition: border 1s ease;
+}
+
+.disabled:active {
+  background-color: #cacaca;
+  opacity: 0.6;
+}
+
+::placeholder {
+  font-family: "Source Code Pro";
+}
+.alert {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 30vw;
+  min-height: 15vh;
+  display: flex;
+  padding: 12px;
+  flex-direction: column;
+  border: 1px solid #000000;
+}
+
+.alert-error {
+  background-color: rgba(255, 83, 83, 1);
+}
+
+.alert-default {
+  background-color: rgb(220, 220, 220);
+}
+
+.alert-success {
+  background-color: rgb(83, 255, 109);
+}
+
+.chatbox {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+}
+
+.instruction-text {
+  font-size: 14px;
+}
+
+.main-wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.board-wrapper {
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  max-width: 100%;
+}
+
+@media only screen and (max-width: 767px) {
+  /* Styles for small screens */
+  .instruction-text {
+    font-size: 8px;
+  }
+  .board-wrapper {
+    flex-wrap: wrap;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+  .instruction-text {
+    font-size: 12px;
+  }
+
+  .board-wrapper {
+    flex-wrap: wrap;
+  }
+}
+
+/* Large screens (e.g., desktops) */
+@media only screen and (min-width: 993px) {
+  .instruction-text {
+    font-size: 14px;
+  }
+}
+
+.slide-in-flash {
+  animation: slideIn 1s ease-out forwards, flashBorder 4s linear; /* Apply both animations */
+}
+
+.slide-in {
+  animation: slideIn 1s ease-out;
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateX(-100%);
+  }
+  50%,
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes flashBorder {
+  0%,
+  100% {
+    background-color: transparent;
+  }
+  50% {
+    background-color: #acdfe5;
+  }
+}
