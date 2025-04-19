@@ -1,4 +1,4 @@
-import { Card } from "@/components/card";
+import React from "react";
 import { ClientHome } from "./client-home";
 
 export default function Home() {
