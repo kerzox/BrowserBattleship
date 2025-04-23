@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { IBM_Plex_Sans, IBM_Plex_Mono } from "next/font/google";
+import { IBM_Plex_Sans, IBM_Plex_Mono, Fira_Code } from "next/font/google";
 import "./globals.css";
 
 const ibm = IBM_Plex_Sans({
@@ -11,6 +11,11 @@ const ibm = IBM_Plex_Sans({
 const ibmMono = IBM_Plex_Mono({
   weight: ["400", "500", "600", "700"],
   variable: "--font-ibm-mono",
+  subsets: ["latin"],
+});
+
+const firaCode = Fira_Code({
+  variable: "--font-fira-code",
   subsets: ["latin"],
 });
 
@@ -26,7 +31,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en'>
-      <body className={`${ibm.variable} ${ibmMono.variable} antialiased`}>
+      <body
+        className={`${ibm.variable} ${firaCode.variable} ${ibmMono.variable} antialiased`}
+      >
         {children}
       </body>
     </html>

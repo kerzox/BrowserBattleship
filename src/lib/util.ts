@@ -2,10 +2,20 @@ interface CxOptions {
   before?: string[];
 }
 
-export function cx(...classes: string[]): string;
-export function cx(options: CxOptions, ...classes: string[]): string;
-export function cx(optionsOrClass?: CxOptions | string, ...classes: string[]) {
-  if (typeof optionsOrClass === "string" || optionsOrClass === undefined) {
+export function cx(...classes: (string | boolean | undefined)[]): string;
+export function cx(
+  options: CxOptions,
+  ...classes: (string | boolean | undefined)[]
+): string;
+export function cx(
+  optionsOrClass?: CxOptions | string | boolean | undefined,
+  ...classes: (string | boolean | undefined)[]
+) {
+  if (
+    typeof optionsOrClass === "string" ||
+    typeof optionsOrClass === "boolean" ||
+    optionsOrClass === undefined
+  ) {
     const allClasses = optionsOrClass ? [optionsOrClass, ...classes] : classes;
     return allClasses.filter(Boolean).join(" ");
   }
